@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+</head>
+<body>
+    <h1>Tasks</h1>
+    <div>
+      {% for task in tasks %}
+        <p>Название задачи {{ task.title }}</p>
+        <p><a href="{% url 'detail' task.slug %}">Detail</a></p>
+        <p><a href="{% url 'update' task.slug %}">Update</a></p>
+      {% endfor %}
+    <p><a href="{% url 'start' %}">Back</a></p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+</head>
+<body>
+    <h1>Task Detail</h1>
+    <div>
+
+        <p>Название задачи: {{ task.title }}</p>
+        <p>Описание задачи: {{ task.description }}</p>
+        <p>Дата создания задачи: {{ task.date_of_creation }}</p>
+        <p>Дата-дедлайн задачи: {{ task.deadline_date }}</p>
+        <p>Уровень приоритета: {{ task.level_task }}</p>
+        <p>Статус: {{ task.status_task }}</p>
+
+    </div>
+    <p>
+        <a href="{% url 'task' %}">Cancel</a>
+    </p>
+</body>
+</html>
